@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick and morty</title>
+  <link rel="stylesheet" href="./static/css/styles.css">
 </head>
 <body>
-    <script src="static/js/app.js"></script>
+  <div class="grid">
+    <img class="logo" src="./static/images/logo@2x.png" width="280" alt="">
+    <div id="character-name-container" class="character-name-container" >
+    </div>
+    <div id="character-image-container" class="character-image-container">
+    </div>
+    <div id="character-description-container" class="character-description-container">
+    </div>
+    <div class="arrow" id="load-next"></div>
+  </div>
+  <script type="module" src="static/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background: #5e8d2f;
+    font-family: system-ui;
+    overflow-x: hidden;
+    background-image: url('../images/test.png');
+    background-position: left 200px top;
+    background-repeat: no-repeat;
+    background-size: 257px 240px;
+  }
+
+  .logo {
+    grid-area: logo;
+    margin: 0 auto 2em;
+    display: block;
+  }
+  .grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    height: calc(100vh - 8em);
+    padding: 4em;
+    grid-column-gap: 8em;
+    grid-template-columns: 50px 1fr 1fr 200px;
+    grid-template-rows: 230px 100px 1fr 1fr 1fr;
+    grid-template-areas: "asset-top logo logo logo" "name character-name avatar avatar" "character-descriptio character-description avatar avatar" "character-text character-text avatar avatar" "asset-bottom space arrow other-line" ;
+  }
+  .character-image-container {
+    grid-area: avatar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow {
+    grid-area: arrow;
+    cursor: pointer;
+    background-image: url('../images/PR (1).jpg');
+    background-repeat: no-repeat;
+    background-position: left  bottom ;
+  }
+  .character-name-container {
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    grid-area: character-name;
+    /* padding-inline-start: 1em; */
+  }
+
+  .character-description-container {
+    grid-area: character-description;
+  }   
+  .wrapper {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 2em;
+  }
+  
+  .character {
+    text-align: center;
+  }
+  .character-image {
+    max-width: 100%;
+    /* width: auto; */
+    border-radius: 50%;
+  }
+  
+  .character-label {
+    background:	#44281d;
+    color: #f0e14a;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 400;
+  }
+  .character-name {
+    position: relative;
+    font-size: 30px;
+  }
+  @media screen and (max-width: 1440px) {
+    .grid {
+      column-gap: 2em;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    body {
+      background-position: left 50px top;
+    }
+    .grid {
+      height: auto;
+      padding: 2em 0;
+      width: calc(100vw - 2em);
+      margin: 0 auto;
+      column-gap: 1em;
+      grid-template-columns: 50px 1fr 1fr;
+      grid-template-rows: repeat(6, auto);
+    }
+  
+    .logo {
+      max-width: 100%;
+    }
+    .character-name {
+      text-align: center;
+    }
+    .character-name h2:after {
+      left: 0;
+      top: calc(100% - 20px);
+    }
+  
+    .character-name-container{
+      margin-top: 1em;
+      justify-content: center;
+    }
+    .arrow {
+      user-select: none;
+      height: 50px;
+      background-position: center;
+    }
+  }
